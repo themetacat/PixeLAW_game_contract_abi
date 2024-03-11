@@ -1,0 +1,58 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "name_space",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "bytes",
+        "name": "call_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "call_CallOtherSystem_call_other_system_fn",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "id",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "name_space",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "bytes",
+        "name": "call_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "call_CallOtherSystem_call_world_process_queue",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
