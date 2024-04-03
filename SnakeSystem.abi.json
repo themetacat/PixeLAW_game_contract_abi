@@ -1,0 +1,478 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "start",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "end",
+        "type": "uint256"
+      }
+    ],
+    "name": "Slice_OutOfBounds",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "ResourceId",
+        "name": "tableId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32[]",
+        "name": "keyTuple",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "Store_DeleteRecord",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "ResourceId",
+        "name": "tableId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32[]",
+        "name": "keyTuple",
+        "type": "bytes32[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "staticData",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "PackedCounter",
+        "name": "encodedLengths",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "dynamicData",
+        "type": "bytes"
+      }
+    ],
+    "name": "Store_SetRecord",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "_msgSender",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_msgValue",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_world",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "x",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "y",
+        "type": "uint32"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "created_at",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "updated_at",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "action",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "app",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct PixelData",
+        "name": "pixel",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "is_dying",
+            "type": "bool"
+          },
+          {
+            "internalType": "enum Direction",
+            "name": "direction",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "step",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "length",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "first_segment_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "last_segment_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "text",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct SnakeData",
+        "name": "snake",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "previous_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "next_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint32",
+            "name": "x",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "y",
+            "type": "uint32"
+          },
+          {
+            "internalType": "string",
+            "name": "pixel_original_color",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "pixel_original_text",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct SnakeSegmentData",
+        "name": "existing_segment",
+        "type": "tuple"
+      }
+    ],
+    "name": "create_new_segment",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "generateUUID",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "init",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "for_player",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "for_app",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint32",
+                "name": "x",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint32",
+                "name": "y",
+                "type": "uint32"
+              }
+            ],
+            "internalType": "struct Position",
+            "name": "position",
+            "type": "tuple"
+          },
+          {
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DefaultParameters",
+        "name": "default_parameters",
+        "type": "tuple"
+      },
+      {
+        "internalType": "enum Direction",
+        "name": "direction",
+        "type": "uint8"
+      }
+    ],
+    "name": "interact",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "move",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "x",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "y",
+        "type": "uint32"
+      },
+      {
+        "internalType": "enum Direction",
+        "name": "direction",
+        "type": "uint8"
+      }
+    ],
+    "name": "next_position",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "is_dying",
+            "type": "bool"
+          },
+          {
+            "internalType": "enum Direction",
+            "name": "direction",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "step",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "length",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "first_segment_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "last_segment_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "text",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct SnakeData",
+        "name": "snake",
+        "type": "tuple"
+      }
+    ],
+    "name": "remove_last_segment",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  }
+]
