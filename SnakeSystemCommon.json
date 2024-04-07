@@ -1,0 +1,84 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/codegen/common.sol",
+    "id": 104714,
+    "exportedSymbols": {
+      "Direction": [
+        104713
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:132:186",
+    "nodes": [
+      {
+        "id": 104707,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:186",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 104713,
+        "nodeType": "EnumDefinition",
+        "src": "107:56:186",
+        "nodes": [],
+        "canonicalName": "Direction",
+        "members": [
+          {
+            "id": 104708,
+            "name": "None",
+            "nameLocation": "126:4:186",
+            "nodeType": "EnumValue",
+            "src": "126:4:186"
+          },
+          {
+            "id": 104709,
+            "name": "Left",
+            "nameLocation": "134:4:186",
+            "nodeType": "EnumValue",
+            "src": "134:4:186"
+          },
+          {
+            "id": 104710,
+            "name": "Right",
+            "nameLocation": "142:5:186",
+            "nodeType": "EnumValue",
+            "src": "142:5:186"
+          },
+          {
+            "id": 104711,
+            "name": "Up",
+            "nameLocation": "151:2:186",
+            "nodeType": "EnumValue",
+            "src": "151:2:186"
+          },
+          {
+            "id": 104712,
+            "name": "Down",
+            "nameLocation": "157:4:186",
+            "nodeType": "EnumValue",
+            "src": "157:4:186"
+          }
+        ],
+        "name": "Direction",
+        "nameLocation": "112:9:186"
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 186
+}
