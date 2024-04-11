@@ -1,0 +1,91 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/codegen/common.sol",
+    "id": 104655,
+    "exportedSymbols": {
+      "TestEnum": [
+        104654
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:122:186",
+    "nodes": [
+      {
+        "id": 104647,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:186",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 104654,
+        "nodeType": "EnumDefinition",
+        "src": "107:46:186",
+        "nodes": [],
+        "canonicalName": "TestEnum",
+        "members": [
+          {
+            "id": 104648,
+            "name": "Q",
+            "nameLocation": "125:1:186",
+            "nodeType": "EnumValue",
+            "src": "125:1:186"
+          },
+          {
+            "id": 104649,
+            "name": "W",
+            "nameLocation": "130:1:186",
+            "nodeType": "EnumValue",
+            "src": "130:1:186"
+          },
+          {
+            "id": 104650,
+            "name": "E",
+            "nameLocation": "135:1:186",
+            "nodeType": "EnumValue",
+            "src": "135:1:186"
+          },
+          {
+            "id": 104651,
+            "name": "R",
+            "nameLocation": "140:1:186",
+            "nodeType": "EnumValue",
+            "src": "140:1:186"
+          },
+          {
+            "id": 104652,
+            "name": "T",
+            "nameLocation": "145:1:186",
+            "nodeType": "EnumValue",
+            "src": "145:1:186"
+          },
+          {
+            "id": 104653,
+            "name": "Y",
+            "nameLocation": "150:1:186",
+            "nodeType": "EnumValue",
+            "src": "150:1:186"
+          }
+        ],
+        "name": "TestEnum",
+        "nameLocation": "112:8:186"
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 186
+}
