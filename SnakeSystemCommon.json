@@ -10,17 +10,17 @@
   },
   "ast": {
     "absolutePath": "src/codegen/common.sol",
-    "id": 104714,
+    "id": 104676,
     "exportedSymbols": {
       "Direction": [
-        104713
+        104675
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:132:186",
+    "src": "32:124:186",
     "nodes": [
       {
-        "id": 104707,
+        "id": 104670,
         "nodeType": "PragmaDirective",
         "src": "32:25:186",
         "nodes": [],
@@ -32,46 +32,39 @@
         ]
       },
       {
-        "id": 104713,
+        "id": 104675,
         "nodeType": "EnumDefinition",
-        "src": "107:56:186",
+        "src": "107:48:186",
         "nodes": [],
         "canonicalName": "Direction",
         "members": [
           {
-            "id": 104708,
-            "name": "None",
+            "id": 104671,
+            "name": "Left",
             "nameLocation": "126:4:186",
             "nodeType": "EnumValue",
             "src": "126:4:186"
           },
           {
-            "id": 104709,
-            "name": "Left",
-            "nameLocation": "134:4:186",
-            "nodeType": "EnumValue",
-            "src": "134:4:186"
-          },
-          {
-            "id": 104710,
+            "id": 104672,
             "name": "Right",
-            "nameLocation": "142:5:186",
+            "nameLocation": "134:5:186",
             "nodeType": "EnumValue",
-            "src": "142:5:186"
+            "src": "134:5:186"
           },
           {
-            "id": 104711,
+            "id": 104673,
             "name": "Up",
-            "nameLocation": "151:2:186",
+            "nameLocation": "143:2:186",
             "nodeType": "EnumValue",
-            "src": "151:2:186"
+            "src": "143:2:186"
           },
           {
-            "id": 104712,
+            "id": 104674,
             "name": "Down",
-            "nameLocation": "157:4:186",
+            "nameLocation": "149:4:186",
             "nodeType": "EnumValue",
-            "src": "157:4:186"
+            "src": "149:4:186"
           }
         ],
         "name": "Direction",
