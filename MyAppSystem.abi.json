@@ -108,11 +108,6 @@
         "type": "tuple"
       },
       {
-        "internalType": "enum TestEnum",
-        "name": "testEnum",
-        "type": "uint8"
-      },
-      {
         "components": [
           {
             "internalType": "uint32",
@@ -131,7 +126,12 @@
       },
       {
         "internalType": "enum TestEnum",
-        "name": "testEnum1",
+        "name": "testEnum",
+        "type": "uint8"
+      },
+      {
+        "internalType": "enum TestEnumTwo",
+        "name": "testEnumTwo",
         "type": "uint8"
       },
       {
@@ -164,8 +164,8 @@
                 "type": "uint32"
               }
             ],
-            "internalType": "struct Position",
-            "name": "po",
+            "internalType": "struct PositionT",
+            "name": "pot",
             "type": "tuple"
           }
         ],
@@ -196,6 +196,58 @@
       }
     ],
     "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum TestEnumTwo",
+        "name": "testEnumTwo",
+        "type": "uint8"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "test_uint",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "ler",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "app",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint32",
+                "name": "x",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint32",
+                "name": "y",
+                "type": "uint32"
+              }
+            ],
+            "internalType": "struct PositionT",
+            "name": "pot",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct TestParameters",
+        "name": "testParameters",
+        "type": "tuple"
+      }
+    ],
+    "name": "test_interact",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   }
 ]
