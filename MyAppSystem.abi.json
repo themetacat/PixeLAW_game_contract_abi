@@ -108,6 +108,11 @@
         "type": "tuple"
       },
       {
+        "internalType": "enum TestEnum",
+        "name": "testEnum",
+        "type": "uint8"
+      },
+      {
         "components": [
           {
             "internalType": "uint32",
@@ -123,11 +128,6 @@
         "internalType": "struct Position",
         "name": "po",
         "type": "tuple"
-      },
-      {
-        "internalType": "enum TestEnum",
-        "name": "testEnum",
-        "type": "uint8"
       },
       {
         "internalType": "enum TestEnumTwo",
