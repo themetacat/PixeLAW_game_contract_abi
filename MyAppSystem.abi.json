@@ -113,6 +113,16 @@
         "type": "uint8"
       },
       {
+        "internalType": "string",
+        "name": "testString",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "testUint",
+        "type": "uint256"
+      },
+      {
         "components": [
           {
             "internalType": "uint32",
@@ -128,6 +138,11 @@
         "internalType": "struct Position",
         "name": "po",
         "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "testAddress",
+        "type": "address"
       },
       {
         "internalType": "enum TestEnumTwo",
@@ -201,9 +216,37 @@
   {
     "inputs": [
       {
+        "internalType": "string",
+        "name": "testString",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "testUint",
+        "type": "uint256"
+      }
+    ],
+    "name": "test2_interact",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "enum TestEnumTwo",
         "name": "testEnumTwo",
         "type": "uint8"
+      },
+      {
+        "internalType": "string",
+        "name": "testString",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "testUint",
+        "type": "uint256"
       },
       {
         "components": [
