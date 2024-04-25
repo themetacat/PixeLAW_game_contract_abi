@@ -2,12 +2,109 @@
   {
     "inputs": [
       {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "start",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "end",
+        "type": "uint256"
+      }
+    ],
+    "name": "Slice_OutOfBounds",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "ResourceId",
+        "name": "tableId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32[]",
+        "name": "keyTuple",
+        "type": "bytes32[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "staticData",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "PackedCounter",
+        "name": "encodedLengths",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "dynamicData",
+        "type": "bytes"
+      }
+    ],
+    "name": "Store_SetRecord",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "_msgSender",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_msgValue",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_world",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint256",
         "name": "number",
         "type": "uint256"
       }
     ],
-    "name": "pix2048_Pix2048System_get_color",
+    "name": "get_color",
     "outputs": [
       {
         "internalType": "string",
@@ -20,7 +117,7 @@
   },
   {
     "inputs": [],
-    "name": "pix2048_Pix2048System_init",
+    "name": "init",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -35,9 +132,9 @@
             "type": "address"
           },
           {
-            "internalType": "address",
-            "name": "for_system",
-            "type": "address"
+            "internalType": "string",
+            "name": "for_app",
+            "type": "string"
           },
           {
             "components": [
@@ -67,7 +164,7 @@
         "type": "tuple"
       }
     ],
-    "name": "pix2048_Pix2048System_interact",
+    "name": "interact",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -82,9 +179,9 @@
             "type": "address"
           },
           {
-            "internalType": "address",
-            "name": "for_system",
-            "type": "address"
+            "internalType": "string",
+            "name": "for_app",
+            "type": "string"
           },
           {
             "components": [
@@ -114,9 +211,28 @@
         "type": "tuple"
       }
     ],
-    "name": "pix2048_Pix2048System_move",
+    "name": "move",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "pure",
     "type": "function"
   }
 ]
