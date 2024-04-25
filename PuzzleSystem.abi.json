@@ -1,5 +1,10 @@
 [
   {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
     "inputs": [
       {
         "internalType": "bytes",
@@ -19,6 +24,43 @@
     ],
     "name": "Slice_OutOfBounds",
     "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "ResourceId",
+        "name": "tableId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32[]",
+        "name": "keyTuple",
+        "type": "bytes32[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "staticData",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "PackedCounter",
+        "name": "encodedLengths",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "dynamicData",
+        "type": "bytes"
+      }
+    ],
+    "name": "Store_SetRecord",
+    "type": "event"
   },
   {
     "inputs": [],
@@ -109,6 +151,53 @@
       }
     ],
     "name": "interact",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "for_player",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "for_app",
+            "type": "string"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint32",
+                "name": "x",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint32",
+                "name": "y",
+                "type": "uint32"
+              }
+            ],
+            "internalType": "struct Position",
+            "name": "position",
+            "type": "tuple"
+          },
+          {
+            "internalType": "string",
+            "name": "color",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DefaultParameters",
+        "name": "default_parameters",
+        "type": "tuple"
+      }
+    ],
+    "name": "move",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
