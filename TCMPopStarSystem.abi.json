@@ -147,7 +147,7 @@
     ],
     "name": "interact",
     "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "payable",
     "type": "function"
   },
   {
