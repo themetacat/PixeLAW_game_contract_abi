@@ -1,24 +1,12 @@
 [
   {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "name": "GameContinue",
+    "inputs": [],
+    "name": "GameContinueError",
     "type": "error"
   },
   {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "name": "Overtime",
+    "inputs": [],
+    "name": "OvertimeError",
     "type": "error"
   },
   {
