@@ -7,6 +7,17 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "shortageToken",
+        "type": "address"
+      }
+    ],
+    "name": "Inventory_shortage",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes",
         "name": "data",
         "type": "bytes"
@@ -26,7 +37,13 @@
     "type": "error"
   },
   {
-    "inputs": [],
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "InsufficientToken",
+        "type": "address"
+      }
+    ],
     "name": "Token_InsufficientBalance",
     "type": "error"
   },
@@ -140,14 +157,14 @@
   {
     "inputs": [
       {
-        "internalType": "address",
+        "internalType": "address[]",
         "name": "token_addr",
-        "type": "address"
+        "type": "address[]"
       },
       {
-        "internalType": "uint256",
+        "internalType": "uint256[]",
         "name": "amount",
-        "type": "uint256"
+        "type": "uint256[]"
       }
     ],
     "name": "buyToken",
@@ -278,14 +295,14 @@
   {
     "inputs": [
       {
-        "internalType": "address",
+        "internalType": "address[]",
         "name": "token_addr",
-        "type": "address"
+        "type": "address[]"
       },
       {
-        "internalType": "uint256",
+        "internalType": "uint256[]",
         "name": "amount",
-        "type": "uint256"
+        "type": "uint256[]"
       }
     ],
     "name": "withDrawToken",
