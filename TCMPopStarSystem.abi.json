@@ -1,13 +1,8 @@
 [
   {
     "inputs": [],
-    "name": "GameContinueError",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "OvertimeError",
-    "type": "error"
+    "stateMutability": "nonpayable",
+    "type": "constructor"
   },
   {
     "inputs": [
@@ -28,6 +23,11 @@
       }
     ],
     "name": "Slice_OutOfBounds",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Token_InsufficientBalance",
     "type": "error"
   },
   {
@@ -68,6 +68,37 @@
     "type": "event"
   },
   {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "ResourceId",
+        "name": "tableId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32[]",
+        "name": "keyTuple",
+        "type": "bytes32[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint48",
+        "name": "start",
+        "type": "uint48"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "Store_SpliceStaticData",
+    "type": "event"
+  },
+  {
     "inputs": [],
     "name": "_msgSender",
     "outputs": [
@@ -104,6 +135,24 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token_addr",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "buyToken",
+    "outputs": [],
+    "stateMutability": "payable",
     "type": "function"
   },
   {
@@ -224,6 +273,24 @@
       }
     ],
     "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token_addr",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "withDrawToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   }
 ]
