@@ -154,6 +154,11 @@
     "type": "error"
   },
   {
+    "inputs": [],
+    "name": "TransferError",
+    "type": "error"
+  },
+  {
     "inputs": [
       {
         "internalType": "string",
@@ -1752,6 +1757,29 @@
   {
     "inputs": [
       {
+        "internalType": "address[]",
+        "name": "tokenAddressArr",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "tokenAddressBalance",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "ResourceId",
+        "name": "fromNamespaceId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setTokenBalanceForNamespace",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes4",
         "name": "selector",
         "type": "bytes4"
@@ -1888,6 +1916,34 @@
       }
     ],
     "name": "transferBalanceToNamespace",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "ResourceId",
+        "name": "fromNamespaceId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "tokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "toAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferERC20TokenToAddress",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
