@@ -48,6 +48,11 @@
     "type": "error"
   },
   {
+    "inputs": [],
+    "name": "getQuoteError",
+    "type": "error"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -274,8 +279,19 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "quote",
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "tokenOut",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "amount",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "quoteOutput",
     "outputs": [
       {
         "internalType": "uint256",
@@ -283,7 +299,7 @@
         "type": "uint256"
       }
     ],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
