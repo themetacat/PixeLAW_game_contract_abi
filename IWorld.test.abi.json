@@ -2225,5 +2225,99 @@
     ],
     "stateMutability": "view",
     "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes",
+            "name": "call_data",
+            "type": "bytes"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct UniversalRouterParams",
+        "name": "routerExecuteParams",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "token_addr",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct TokenInfo",
+        "name": "tokenInfo",
+        "type": "tuple"
+      },
+      {
+        "internalType": "ResourceId",
+        "name": "fromNamespaceId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "universalRouterExecute",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes",
+            "name": "call_data",
+            "type": "bytes"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct UniversalRouterParams[]",
+        "name": "routerExecuteParams",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "token_addr",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct TokenInfo[]",
+        "name": "tokenInfo",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "ResourceId",
+        "name": "fromNamespaceId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "universalRouterExecuteBatch",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
   }
 ]
